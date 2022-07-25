@@ -14,25 +14,30 @@ function createEmployeeRecords(arr){
     return arr.map(record=>createEmployeeRecord(record))
 }
 
-function createTimeInEvent(employee, time){
-    //YYYY-MM-DD HHMM
-    //012356789012345
-    const obj = {
+function createTimeInEvent(employee, dateStamp){
+    let [date, hour] = dateStamp.split(' ')
+
+    employee.timeInEvents.push({
         type: "TimeIn",
-        hour: time.slice(11,13),
-        date: time.slice(5,10)
-    }
-    console.log({obj})
-    employee.timeInEvents.push(obj)
+        hour: parseInt(hour, 10),
+        date,
+    })
+
+    return employee
 }
 
-function createTimeOutEvent(employee, time){
-    // console.log(employee.timeInEvents,{time})
-    //YYYY-MM-DD HHMM
-    //012356789012345
+function createTimeOutEvent(employee, dateStamp){
+    let [date, hour] = dateStamp.split(' ')
+
     employee.timeOutEvents.push({
         type: "TimeOut",
-        hour: time.slice(11,13),
-        date: time.slice(5,10)
+        hour: parseInt(hour, 10),
+        date,
     })
+
+    return employee
+}
+
+function hoursWorkedOnDate(employee,date){
+    
 }
