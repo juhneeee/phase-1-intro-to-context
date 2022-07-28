@@ -41,3 +41,11 @@ function createTimeOutEvent(employee, dateStamp){
 function hoursWorkedOnDate(employee,date){
     
 }
+
+function wagesEarnedOnDate(){
+
+}
+
+function calculatePayroll(){
+    
+}
