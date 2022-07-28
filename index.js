@@ -42,10 +42,10 @@ function hoursWorkedOnDate(employee,date){
     
 }
 
-function wagesEarnedOnDate(){
+function wagesEarnedOnDate(employee){
 
 }
 
-function calculatePayroll(){
-    
+function calculatePayroll(exployees){
+
 }
